@@ -44,44 +44,46 @@ export default function Register() {
   };
 
   return (
-    <main className="bg-black">
-      <div className="flex flex-col text-center items-center justify-center pt-20">
-        {/* Login API */}
+    <main className="bg-slate-300">
+      <div className="flex flex-col text-center items-center justify-center py-20">
+        <div className="p-8 border-4 border-yellow bg-black shadow-2xl rounded-3xl">
+          {/* Login API */}
 
-        <h1 className="text-yellow">Login Form</h1>
-        <form /*action = "/send-data-here"*/ method="post" className="flex flex-col mt-8 text-center items-center justify-center gap-6">
-          {/* <label for="name">Name: </label>
-          <input type="text" placeholder="Full Name" />
-          <label for="last">Last name:</label> */}
-          <input
-            type="text"
-            placeholder="Email"
-            required
-            onChange={(e) => {
-              setLoginData({ ...loginData, email: e.target.value });
-            }}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            required
-            onChange={(e) => {
-              setLoginData({ ...loginData, password: e.target.value });
-            }}
-          />
-          <button type="submit" className="custom-button-1" onClick={handleLogin}>
-            Login
-          </button>
-        </form>
+          <h1 className="text-yellow">Login Form</h1>
+          <form /*action = "/send-data-here"*/ method="post" className="flex flex-col mt-8 text-center items-center justify-center gap-6">
+            {/* <label for="name">Name: </label>
+            <input type="text" placeholder="Full Name" />
+             <label for="last">Last name:</label> */}
+            <input
+              type="text"
+              placeholder="Email"
+              required
+              onChange={(e) => {
+                setLoginData({ ...loginData, email: e.target.value });
+              }}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              required
+              onChange={(e) => {
+                setLoginData({ ...loginData, password: e.target.value });
+              }}
+            />
+            <button type="submit" className="custom-button-1" onClick={handleLogin}>
+              Login
+            </button>
+          </form>
 
-        <a className="text-yellow float-right mb-10 mt-3 text-xs"  href="/register">
-          <p>New here? Register Now</p>
-        </a>
-        
-        {/* <button onClick={getSavedToke}>
+          <a className="text-yellow float-right mb-10 mt-3 text-xs" href="/register">
+            <p>New here? Register Now</p>
+          </a>
+
+          {/* <button onClick={getSavedToke}>
           Get My Profile
-        </button> */}
-        
+          </button> */}
+        </div>
+
       </div>
     </main>
   );
