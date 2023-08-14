@@ -9,7 +9,7 @@ export default function Contact() {
         message: "",
     });
 
-    const handContact = async (e) => {
+    const handleContact = async (e) => {
         e.preventDefault();
         console.log(contactData);
         try {
@@ -27,6 +27,7 @@ export default function Contact() {
         catch (err) {
             console.log(err);
         };
+
         // Do it this way if you want to clear the input field after submission
         // But for that you need to add value={contact.email} in the every input tag
         setContactData({
@@ -47,11 +48,9 @@ export default function Contact() {
                             <div className="mb-3">
                                 <div className="flex">
                                     <div className="flex flex-col mr-5">
-                                        <label className="form-label" for="first-name">First name</label>
+                                        <label>First name</label>
                                         <input
-                                            id="first-name"
                                             placeholder="First name"
-                                            aria-label="First name"
                                             type="text"
                                             required
                                             onChange={(e) => {
@@ -61,12 +60,10 @@ export default function Contact() {
                                         />
                                     </div>
                                     <div className="flex flex-col">
-                                        <label for="last-name" className="form-label">Last name</label>
+                                        <label>Last name</label>
                                         <input
-                                            type="text"
-                                            id="last-name"
                                             placeholder="Last name"
-                                            aria-label="Last name"
+                                            type="text"
                                             required
                                             onChange={(e) => {
                                                 setContactData({ ...contactData, lastName: e.target.value });
@@ -78,29 +75,26 @@ export default function Contact() {
                             </div>
 
                             <div className="mb-3 flex flex-col">
-                                <label for="exampleInputEmail1" className="">Email address</label>
+                                <label>Email address</label>
                                 <input
-                                    type="email"
-                                    id="exampleInputEmail1"
-                                    required
                                     placeholder="Enter your email"
-                                    aria-describedby="emailHelp"
+                                    type="email"
+                                    required
                                     onChange={(e) => {
                                         setContactData({ ...contactData, email: e.target.value });
                                     }}
                                     value={contactData.email}
                                 />
-                                <div id="emailHelp" className="form-text text-white text-xs">
+                                <div className="text-white text-xs">
                                     We will never share your email with anyone else.
                                 </div>
                             </div>
                             <div className="mb-3 flex flex-col">
-                                <label for="exampleFormControlTextarea1" className="form-label flex flex-col">Drop your feedback/query</label>
+                                <label className="flex flex-col">Drop your feedback/query</label>
                                 <textarea
-                                    id="exampleFormControlTextarea1"
-                                    required
                                     placeholder="Enter your message "
                                     rows="3"
+                                    required
                                     onChange={(e) => {
                                         setContactData({ ...contactData, message: e.target.value });
                                     }}
@@ -108,7 +102,7 @@ export default function Contact() {
                                 ></textarea>
                             </div>
                             <button type="submit" className="bg-yellow hover:bg-black text-black hover:text-white border-2 border-yellow w-32 h-10 rounded-lg"
-                            onSubmit={handContact}>
+                                onClick={handleContact}>
                                 Submit
                             </button>
                         </form>
