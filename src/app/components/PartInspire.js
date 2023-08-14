@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import Insp from "../images/inspire.png";
+import Insp from "../images/Inspire.png";
 import { useState } from "react";
 
 export default function PartInspire() {
