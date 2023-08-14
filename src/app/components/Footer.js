@@ -57,7 +57,7 @@ export default function Footer() {
                     <a href="#">Our Story</a>
                   </li>
                   <li>
-                    <a href="/client-feedback">Client Feedback</a>
+                    <a href="/articles">Client Feedback</a>
                   </li>
                   <li>
                     <a href="#">CEO Desk</a>
