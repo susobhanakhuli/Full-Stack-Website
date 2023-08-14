@@ -8,6 +8,9 @@ export default function Register() {
     password: "",
     gender: "",
     age: "",
+    weight: "",
+    height: "",
+    branch: "",
   });
 
   const handleRegister = (e) => {
@@ -81,6 +84,33 @@ export default function Register() {
               setregisterData({ ...registerData, age: e.target.value });
             }}
           />
+          <input
+            type="text"
+            placeholder="Weight (in KG)"
+            onChange={(e) => {
+              setregisterData({ ...registerData, weight: e.target.value });
+            }}
+          />
+          <input
+            type="text"
+            placeholder="Height (in cm)"
+            onChange={(e) => {
+              setregisterData({ ...registerData, height: e.target.value });
+            }}
+          />
+          <select
+            onChange={(e) => {
+              setregisterData({ ...registerData, branch: e.target.value });
+            }}
+          >
+            <option value="" disabled selected hidden>
+              Desired Branch
+            </option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Chennai">Chennai</option>
+          </select>
           <button type="submit" className="custom-button-1" onClick={handleRegister}>
             Register
           </button>
