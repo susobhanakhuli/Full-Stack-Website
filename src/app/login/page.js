@@ -36,6 +36,11 @@ export default function Register() {
           navigate("/login/getmyprofile");
       })
       .catch((err) => console.log(err));
+    
+    setLoginData({
+      email: "",
+      password: "",
+    });
   };
 
   const getSavedToke = () => {
@@ -61,6 +66,7 @@ export default function Register() {
               onChange={(e) => {
                 setLoginData({ ...loginData, email: e.target.value });
               }}
+              value={loginData.email}
             />
             <input
               type="password"
@@ -69,6 +75,7 @@ export default function Register() {
               onChange={(e) => {
                 setLoginData({ ...loginData, password: e.target.value });
               }}
+              value={loginData.password}
             />
             <button type="submit" className="custom-button-1" onClick={handleLogin}>
               Login
