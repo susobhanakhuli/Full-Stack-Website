@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function Register() {
@@ -12,6 +13,14 @@ export default function Register() {
     height: "",
     branch: "",
   });
+
+  // Create Hook router to use in button or to navigate
+  const router = useRouter();
+
+  // Create function to Hook router using button or to navigate automatically
+  const navigate = (page_link) => {
+    router.push(page_link);
+  };
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -27,6 +36,8 @@ export default function Register() {
       .then((data) => {
         // console.log(data.message);
         alert(data.message);
+        if (data.message === "User registered successfully")
+          navigate("/login");
       })
       .catch((err) => console.log(err));
   };
