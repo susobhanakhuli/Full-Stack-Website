@@ -70,41 +70,43 @@ export default function UploadProfilePic() {
     };
 
     return (
-        <main className="bg-black text-white">
-            <div className="flex flex-col items-center text-center justify-center">
-                {/* Upload Profile Pic API */}
-                <h1 className="text-yellow">Upload Profile Pic</h1>
-                <form className="flex flex-col items-center text-center justify-center" onSubmit={handleUpload}>
-                    <input
-                        type="file"
-                        name="profilePic"
-                        id="profilePic"
-                        className="w-fit-content text-white"
-                        onChange={handleFileChange} />
-                    {preview && (
-                        <Image
-                            src={preview}
-                            alt="Profile Pic"
-                            className="profilePic pb-8"
-                            width={200}
-                            height={200}>
-                        </Image>
-                    )}
-                    <button className="custom-button-2 my-5" type="submit">Upload</button>
-                    {uploadStatus && (
-                        <div className="flex flex-col gap-6">
-                            {uploadSuccess && (
-                                <p style={{ color: "green" }}>Profile Pic Uploaded Successfully</p>
-                            )}
-                            {uploadError && (
-                                <p style={{ color: "red" }}>{uploadErrorMessage}</p>
-                            )}
-                        </div>
-                    )}
-                </form>
-                <button className="custom-button-1 my-5" type="submit" onClick={() => router.push("/login/getmyprofile")}>
-                    Back
-                </button>
+        <main className="bg-slate-300">
+            <div className="flex flex-col items-center text-center justify-center py-10">
+                <div className="p-8 border-4 border-yellow bg-black text-white shadow-2xl rounded-3xl">
+                    {/* Upload Profile Pic API */}
+                    <h1 className="text-yellow">Upload Profile Pic</h1>
+                    <form className="flex flex-col items-center text-center justify-center" onSubmit={handleUpload}>
+                        <input
+                            type="file"
+                            name="profilePic"
+                            id="profilePic"
+                            className="w-fit-content text-white"
+                            onChange={handleFileChange} />
+                        {preview && (
+                            <Image
+                                src={preview}
+                                alt="Profile Pic"
+                                className="profilePic pb-8"
+                                width={200}
+                                height={200}>
+                            </Image>
+                        )}
+                        <button className="custom-button-2 my-5" type="submit">Upload</button>
+                        {uploadStatus && (
+                            <div className="flex flex-col gap-6">
+                                {uploadSuccess && (
+                                    <p style={{ color: "green" }}>Profile Pic Uploaded Successfully</p>
+                                )}
+                                {uploadError && (
+                                    <p style={{ color: "red" }}>{uploadErrorMessage}</p>
+                                )}
+                            </div>
+                        )}
+                    </form>
+                    <button className="custom-button-1 my-5" type="submit" onClick={() => router.push("/login/getmyprofile")}>
+                        Back
+                    </button>
+                </div>
             </div>
         </main>
     );
