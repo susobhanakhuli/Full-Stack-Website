@@ -10,7 +10,7 @@ export default function Subscriber() {
         e.preventDefault();
         console.log(subscriber);
         try {
-            const response = await fetch("http://localhost:8000/subscribe", {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_BACK_URL}/subscribe`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -20,7 +20,7 @@ export default function Subscriber() {
 
             const data = await response.json();
             alert(data.message);
-            // fetch("http://localhost:8000/subscribe", {
+            // fetch(`${process.env.NEXT_PUBLIC_BACK_URL}/subscribe', {
             //     method: "POST",
             //     headers: {
             //         "Content-Type": "application/json",

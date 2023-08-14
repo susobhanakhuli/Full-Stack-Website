@@ -19,7 +19,7 @@ export default function Register() {
   const handleLogin = (e) => {
     e.preventDefault();
     console.log(loginData);
-    fetch("http://localhost:8000/login", {
+    fetch(`${process.env.NEXT_PUBLIC_BACK_URL}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

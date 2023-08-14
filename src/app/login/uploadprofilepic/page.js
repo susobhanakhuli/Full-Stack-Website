@@ -36,7 +36,7 @@ export default function UploadProfilePic() {
         formData.append("profilePic", file);
         // console.log(formData.profilePic);
         try {
-            const response = await fetch("http://localhost:8000/imageupoad/uploadprofilepic", {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_BACK_URL}/imageupoad/uploadprofilepic`, {
                 method: "POST",
                 headers: {
                     // "content-type": "multipart/form-data",

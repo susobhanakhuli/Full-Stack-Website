@@ -13,7 +13,7 @@ export default function Contact() {
         e.preventDefault();
         console.log(contactData);
         try {
-            const response = await fetch("http://localhost:8000/contact", {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_BACK_URL}/contact`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

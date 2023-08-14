@@ -25,7 +25,7 @@ export default function Register() {
   const handleRegister = (e) => {
     e.preventDefault();
     console.log(registerData);
-    fetch("http://localhost:8000/register", {
+    fetch(`${process.env.NEXT_PUBLIC_BACK_URL}/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

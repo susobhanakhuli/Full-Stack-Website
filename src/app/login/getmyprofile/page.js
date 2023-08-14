@@ -16,7 +16,7 @@ export default function GetMyProfile() {
     try {
       const token = localStorage.getItem("accesstoken");
       localStorage.removeItem("accesstoken");
-      const response = await fetch("http://localhost:8000/logout", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACK_URL}/logout`, {
         method: "GET",
         headers: {
           "content-type": "application/json",
@@ -36,7 +36,7 @@ export default function GetMyProfile() {
   const getUserData = () => {
     setShow(!show);
     const token = localStorage.getItem("accesstoken");
-    fetch("http://localhost:8000/getmyprofile", {
+    fetch(`${process.env.NEXT_PUBLIC_BACK_URL}/getmyprofile`, {
       method: "GET",
       headers: {
         "content-type": "application/json",
