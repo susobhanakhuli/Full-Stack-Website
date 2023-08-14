@@ -168,9 +168,11 @@ export default function About() {
               Special offer: Join now and get free suppliments of a year for free.
             </p>
             {/* </div> */}
-            <button className="custom-button-1 hover:text-slate-200 mt-5 button-transition">
-              Join Now
-            </button>
+            <a href="/register">
+              <button className="custom-button-1 hover:text-slate-200 mt-5 button-transition">
+                Join Now
+              </button>
+            </a>
           </div>
           {/* Black container Part ends */}
 
@@ -185,9 +187,11 @@ export default function About() {
               <span>3. Health and Wellness:</span> We prioritize the holistic well-being of our members. Beyond physical fitness, we emphasize mental and emotional wellness. Our goal is to help you lead a balanced and fulfilling life.
               <span>4. Personalization:</span> We recognize that every individual is unique. Our approach is personalized, with tailored fitness and nutrition plans that consider your goals, preferences, and limitations.
             </p>
-            <button className="custom-button-3 button-transition">
-              Join Now
-            </button>
+            <a href="/register">
+              <button className="custom-button-3 button-transition">
+                Join Now
+              </button>
+            </a>
           </div>
           {/* White container Part ends */}
         </div>
