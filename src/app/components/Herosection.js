@@ -47,7 +47,7 @@ export default function HeroSection() {
                             />
                         </div>
                     </a>
-                    <a href="https://www.facebook.com/susobhan.akhuli.1/" target="_blank">
+                    <a href="https://www.instagram.com/susobhanakhuli/" target="_blank">
                         <div className="flex justify-center items-center rounded-full mb-3">
                             <FontAwesomeIcon
                                 icon={faInstagram}
@@ -55,7 +55,7 @@ export default function HeroSection() {
                             />
                         </div>
                     </a>
-                    <a href="https://www.facebook.com/susobhan.akhuli.1/" target="_blank">
+                    <a href="https://twitter.com/SusobhanAkhuli" target="_blank">
                         <div className="flex justify-center items-center rounded-full mb-3">
                             <FontAwesomeIcon
                                 icon={faTwitter}
