@@ -42,13 +42,13 @@ export default function Subscriber() {
     };
 
     return (
-        <div>
+        <div className="flex flex-col text-center items-center justify-center ">
             <h4 className="footer-description-heads">Subscribe</h4>
             <div className="mb-3">
                 <input
                     type="email"
-                    className="w-96 h-9 rounded-l-[4px] rounded-r-none outline-none"
-                    placeholder="Recipient's Email-id/Username"
+                    className="w-2/3 md:w-96 h-8 sm:h-9 p-2 md:py-2 md:px-4 rounded-l-[4px] rounded-r-none outline-none"
+                    placeholder="Recipient's Email-id"
                     required
                     onChange={(e) => {
                         setSubscriber({email: e.target.value });
@@ -56,7 +56,7 @@ export default function Subscriber() {
                     value={subscriber.email}
                 />
                 <button
-                    className="bg-yellow hover:bg-amber-500 text-black w-24 h-9 px-3 mt-[2px] rounded-l-none rounded-r-[4px]"
+                    className="bg-yellow hover:bg-amber-500 text-black w-1/3 md:w-24 h-8 sm:h-9 p-0 md:px-3 mt-1 sm:mt-[2px] rounded-l-none rounded-r-[4px]"
                     onClick={subscription}
                 >
                     Subscribe

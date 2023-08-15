@@ -12,9 +12,9 @@ import Subscriber from "./Subscriber";
 export default function Footer() {
   return (
     <footer className="bg-black block justify-between items-center px-4 py-16">
-      <div className="text-white mx-20 mb-10">
-        <div className="container">
-          <div className="flex gap-24 footer-a-links">
+      <div className="text-white md:mx-20 md:mb-10">
+        <div className="">
+          <div className="flex flex-wrap flex-col sm:flex-row gap-8 sm:gap-16 md:gap-24 text-center justify-center footer-a-links">
             <div className="footer-section-description">
               <div className="">
                 <h4 className="text-white mt-5 mb-3">Company</h4>
