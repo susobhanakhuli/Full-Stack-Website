@@ -54,7 +54,7 @@ export default function Footer() {
                 <h4 className="footer-description-heads">About Us</h4>
                 <ul className="flex flex-col">
                   <li>
-                    <a href="#">Our Story</a>
+                    <a href="/about">Our Story</a>
                   </li>
                   <li>
                     <a href="/articles">Client Feedback</a>
