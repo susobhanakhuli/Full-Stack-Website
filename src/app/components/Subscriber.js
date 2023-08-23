@@ -6,11 +6,13 @@ export default function Subscriber() {
         email: ""
     });
 
+    const backend_url = process.env.NEXT_PUBLIC_BACK_URL;
+
     const subscription = async (e) => {
         e.preventDefault();
         console.log(subscriber);
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_BACK_URL}/subscribe`, {
+            const response = await fetch(`${backend_url}/subscribe`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
